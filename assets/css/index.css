@@ -127,7 +127,9 @@ body {
         list-style: circle;
         margin: 0; }
       .container .main .info-unit ul li .info-content .fa {
-        font-size: 1em; }
+        font-size: 1em; 
+        margin-left: -1.5rem;
+        margin-top: 0.5rem;}
 
 /* -------------------------------------------------
  * 文档底部
