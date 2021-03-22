@@ -203,6 +203,11 @@ body .info-unit h3 {
   margin-top: 1rem;
 }
 
+.container .main .info-unit ul .work-exper li {
+  list-style: circle;
+  margin-top: -1rem;
+}
+
 /* -------------------------------------------------
  * 文档底部
  * ------------------------------------------------- */
