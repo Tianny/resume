@@ -199,13 +199,23 @@ body .info-unit h3 {
   margin-left: 1.5rem;
 }
 
-.work {
-  margin-top: 1rem;
-}
+
 
 .container .main .info-unit ul .work-exper li {
   list-style: circle;
   margin-top: -1rem;
+}
+
+section.project.info-unit {
+  margin-top: -2rem;
+}
+
+body .info-skill h2 {
+  font-weight: 700;
+}
+
+.work-self {
+  margin-top: 1rem;
 }
 
 /* -------------------------------------------------
