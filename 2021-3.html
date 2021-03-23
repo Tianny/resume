@@ -209,7 +209,7 @@
                             交由 Spark Streaming 解析消费，将解析后的内容索引存储到 ES。
                             <br />
                             <i class="fa fa-list-ul" aria-hidden="true"></i>
-                            [职责] HDFS 文件目录数监控与小文件合并。解析 fsImage 文件，按时间分区将 T+1 天数据导入到 Impala 中。 在 Hue 上进行查询统计分析。为了对接 Grafana 面板展示，
+                            [职责] HDFS 文件目录数监控。解析 fsImage 文件，按时间分区将 T+1 天数据导入到 Impala 中。 在 Hue 上进行查询统计分析。为了对接 Grafana 面板展示，
                             基于 SimpleJsonDatasource 做了一个 Backend，通过把来自 Grafana 页面的 sql 请求，实现到对应 API 的接口。
                             通过 python impyla 库来访问 imapla，将结果组装成需要的时序数据格式。
 
