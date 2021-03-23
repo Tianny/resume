@@ -190,7 +190,7 @@
                     </li>
                     <li>
                         <h3>
-                            <span>大数据平台监控告警系统</span>
+                            <span>大数据平台监控报警系统</span>
                             <time>2018.6-2019.4</time>
                         </h3>
                         <ul class="info-content">
@@ -198,17 +198,20 @@
                             [背景] 大数据平台监控告警体系，围绕数据采集、处理、存储、展示、告警四个模块，进行组件监控、应用监控和业务监控
                             <br />
                             <i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                            [技术] Rsyslogd + Spark + Kafka + ElasticSearch + Graphite + Prometheus + Grafana
+                            [技术] Spark + Kafka + ElasticSearch + Rsyslogd + Graphite + Prometheus + Grafana
                             <br />
                             <i class="fa fa-list-ul" aria-hidden="true"></i>
-                            [职责] 业务指标数据收集。业务方按照规定的 JSON 字段格式记录指标信息并输出到 Rsyslog 中。
-                            Rsyslog 服务收集并传输日志内容至 Kafka 集群，并通过 Spark Streaming 解析消费，将解析后的内容索引存储到 ES。
+                            [职责] 业务日志聚合报警。无需侵入业务代码，通过日志聚合平台 Sentry，聚合相同类型的错误日志，并开发对接钉钉的报警功能。
                             <br />
                             <i class="fa fa-list-ul" aria-hidden="true"></i>
-                            [职责] HDFS 文件目录数监控与小文件合并。
+                            [职责] 业务指标收集。业务方按规定的 JSON 字段格式输出指标数据日志至 Rsyslog 中。
+                            Rsyslog 服务收集并传输日志内容至 Kafka 集群，交由 Spark Streaming 解析消费，将解析后的内容索引存储到 ES。
                             <br />
                             <i class="fa fa-list-ul" aria-hidden="true"></i>
-                            [职责] Spark 内存探针。
+                            [职责] HDFS 文件目录数监控与小文件合并。解析 fsImage 文件，按时间分区将 T+1 天数据导入到 Impala 中。 可直接再 Hue 上进行查询。同时为了对接 Grafana 面板展示，
+                            基于 SimpleJsonDatasource 做了一个 backend，通过把来自 grafana 页面的 sql，请求到实现了对应 API 的接口，
+                            通过 python impala jdbc 库 impyla 来访问 imapla，结果组装成 jsondatasource 所能识别的时序数据格式。
+
                             <br />
                         </ul>
                     </li>
@@ -240,12 +243,9 @@
                 <h2><i class="fa fa-check" aria-hidden="true"></i>技能清单</h2>
                 <hr>
                 <ul class="info-content">
-                    <li>Python、Flask、SQLAlchemy</li>
-                    <li class="skill">熟练掌握 Java、Go、Python</li>
-
-                    <li class="skill">熟练使用 Spring Boot 框架</li>
-                    <li>熟练运用 Spark、Flink 流处理框架</li>
                     <li>Linux、Shell</li>
+                    <li>熟练掌握 Java、Go、Python</li>
+                    <li >熟练使用 Spring Boot 框架</li>
                     <li>Jenkins、Ansible、Git</li>
                     <li>Docker、Kubernetes</li>
                     <li>CCIE Network Expert</li>
