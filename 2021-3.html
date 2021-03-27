@@ -44,7 +44,7 @@
                 <ul>
                     <li>
                         <label>个人信息</label>
-                        <span>谢天 / 男 / 28岁</span>
+                        <span>谢天 / 男 / 27岁</span>
                     </li>
                     <li>
                         <label>学历</label>
@@ -106,7 +106,7 @@
                             </li>
 
                             <li>
-                                大数据实训平台设计与研发工作，围绕容器镜像、容器调度、容器跨主机通信、容器限额等方面进行技术攻关和功能开发
+                                大数据实训平台设计与研发工作，围绕容器镜像、容器调度、容器跨主机通信、容器存储限额等方面进行技术攻关和功能开发
                             </li>
                         </ul>
                     </li>
@@ -167,6 +167,61 @@
                 </h2>
                 <hr />
                 <ul>
+                    <li>
+                        <h3>
+                            <span>算力调度平台</span>
+                            <time>2020.4-2020.10</time>
+                        </h3>
+                        <ul class="info-content">
+
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                            [背景] 算力平台承接政府企业面向数据科学类的 AI 竞赛。平台提供算力资源，为选手提交的作品进行模型预测与训练，并对标签结果进行计算评分。
+                            <br />
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            [技术] SpringBoot + Docker + Kubernetes + MySQL + HuaweiCloud
+                            <br />
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 设计选手提交作品的元数据，研发支持深度学习和机器学习的基础镜像，结合 K8S Job、PVC 等概念，完成对任务模型的抽象。
+                            <br>
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 设计任务执行的各个阶段，包括任务查询、环境准备、镜像制作、任务运行、结果收集、结果推送、环境清理等模块功能
+                            <br>
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 对接华为云，实现 GPU 机器的动态申请、分配和回收。调用 K8S API 实现任务的创建、运行、销毁、清理、监控和异常信息上报等功能。
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h3>
+                            <span>大数据实训平台</span>
+                            <time>2020.10-至今</time>
+                        </h3>
+                        <ul class="info-content">
+
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                            [背景] 实训平台为高校提供大数据培训环境和课程。平台底层以容器技术为基础，统一调度和分配集群资源，将大数据组件容器化，提供实验环境的创建、访问、销毁等功能
+                            <br />
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            [技术] SpringBoot + Netty + Go + Docker + MySQL + Redis + OpenvSwitch + Nginx + Lua
+                            <br />
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 大数据组件的容器镜像研发，包括 HDFS、YARN、Hive、Kafka 等组件，供课程使用。
+                            <br>
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 调研设计容器跨宿主机通信解决方案。采用 OpenvSwitch VXLAN 技术，以支持 Hadoop 以集群方式运行。
+                            <br>
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 基于 Linux 的 FUSE 用户空间文件系统，借助 go-fuse 开源库，开发代理文件系统 proxyFS，实现对挂载目录写入时的限额检查， 解决了 Docker 挂载 NFS 无法限额的问题。
+                            <br>
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 开发在线调试功能。将容器暴露的端口，使用 Lua 开发 Nginx 动态路由功能，
+                            <br>
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            [职责] 基于 Netty，开发 ResourceManager 和 Executor。ResourceManager 负责资源管理、任务编排、指令下达，Executor 负责具体的任务执行，监控上报等功能。
+                            ResourceManager 和 Executor 两者之间使用 ProtoBuf 进行通信。
+                        </ul>
+                    </li>
+
                     <li>
                         <h3>
                             <span>Spark 应用管理平台</span>
