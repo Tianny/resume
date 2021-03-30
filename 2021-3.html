@@ -16,7 +16,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>[简历]谢天-SRE工程师-15161466228</title>
+    <title>[简历]谢天-15161466228</title>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/typo.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -218,9 +218,7 @@
                             <br>
                             <i class="fa fa-list-ul" aria-hidden="true"></i>
                             [职责] 基于 Netty，开发服务端和客户端。使用 Protobuf 协议进行数据交换。服务端负责集群资源管理、任务下发，客户端负责具体任务执行，状态上报，资源上报等功能。
-                            客户端从服务端接收到消息后，存入自定义的 TaskQueue 队列中。 TaskQueue 使用 BlockingQueue 存储容器的操作指令集，同时引入 ConcurrentHashMap 保存容器名称和其对应的指令集队列。
-                            使用线程池来进行消费处理。
-                            业务上针对某个具体容器的指令集需要严格按照顺序进行操作，因此使用 ReentrantReadWriteLock 的写锁，保证某一时刻只有一个线程在消费 BlockingQueue 中的数据。
+                            客户端使用 BlockingQueue 和 ConcurrentHashMap 自定义消息队列，使用线程池来进行消费处理，同时使用 ReentrantReadWriteLock 的写锁来保证对某个具体容器的操作顺序。
                         </ul>
                     </li>
 
